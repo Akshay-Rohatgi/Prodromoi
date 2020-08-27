@@ -7,13 +7,14 @@ import (
 
 func request(url, username string) {
 	finURL := url + username
-	fmt.Println("Sending request to " + finURL)
+	print("running", "Sending request to " + finURL)
 }
 
 func print(set, message string) {
 	yellow := color.New(color.Bold, color.FgYellow).SprintFunc()
 	red := color.New(color.Bold, color.FgRed).SprintFunc()
 	blue := color.New(color.Bold, color.FgBlue).SprintFunc()
+	green := color.New(color.Bold, color.FgGreen).SprintFunc()
 	switch set {
 	case "prompt":
 		fmt.Printf("%s %s\n", yellow("[PROMPT]"), message)
@@ -21,6 +22,8 @@ func print(set, message string) {
 		fmt.Printf("%s %s\n", red("[ERROR]"), message)
 	case "success":
 		fmt.Printf("%s %s\n", blue("[SUCCESS]"), message)
+	case "running":
+		fmt.Printf("%s %s\n", green("[RUNNING]"), message)
 	}
 }
 
