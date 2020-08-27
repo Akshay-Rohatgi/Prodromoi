@@ -20,4 +20,8 @@ func main() {
 	print("success", "yay something worked for once!")
 	print("running", "something is running")
 	print("info", "important information")
+
+	if validate("github.com/", "Akshay-Rohatgi") == true {
+		print("success", "username found!")
+	}
 }

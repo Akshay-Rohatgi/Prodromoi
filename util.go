@@ -5,10 +5,6 @@ import (
 	"github.com/fatih/color"
 )
 
-func request(url, username string) {
-	finURL := url + username
-	print("running", "Sending request to " + finURL)
-}
 
 func print(set, message string) {
 	yellow := color.New(color.Bold, color.FgYellow).SprintFunc()
