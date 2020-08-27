@@ -15,6 +15,8 @@ func print(set, message string) {
 	red := color.New(color.Bold, color.FgRed).SprintFunc()
 	blue := color.New(color.Bold, color.FgBlue).SprintFunc()
 	green := color.New(color.Bold, color.FgGreen).SprintFunc()
+	white := color.New(color.Bold, color.FgWhite).SprintFunc()
+	
 	switch set {
 	case "prompt":
 		fmt.Printf("%s %s\n", yellow("[PROMPT]"), message)
@@ -24,6 +26,8 @@ func print(set, message string) {
 		fmt.Printf("%s %s\n", blue("[SUCCESS]"), message)
 	case "running":
 		fmt.Printf("%s %s\n", green("[RUNNING]"), message)
+	case "info":
+		fmt.Printf("%s %s\n", white("[INFO]"), message)
 	}
 }
 
