@@ -5,7 +5,7 @@ import (
 )
 
 func request(url, username string) (*http.Response) {
-	finURL := "https://" + url + username
+	finURL := url + username
 	print("running", "Sending request to " + finURL)
 
 	resp, err := http.Get(finURL)
@@ -17,7 +17,7 @@ func request(url, username string) (*http.Response) {
 }
 
 func validate(url, username string) (bool) {
-	bruh := request("github.com/", "Akshay-Rohatgi")
+	bruh := request(url, username)
 	if bruh.StatusCode == 200 {
 		return true
 	}

@@ -17,6 +17,18 @@
     },
     {
        "site":"Twitch",
-       "host":"https://twitch.tv/Sykkuno"
+       "host":"https://twitch.tv/"
+    },
+    {
+       "site":"Pastebin",
+       "host":"https://pastebin.com/u/"
+    },
+    {
+       "site":"Facebook",
+       "host":"https://www.facebook.com/"
+    },
+    {
+       "site":"Instagram",
+       "host":"https://www.instagram.com/"
     }
 ]
