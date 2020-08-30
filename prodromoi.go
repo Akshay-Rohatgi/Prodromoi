@@ -1,7 +1,12 @@
 package main
 
+import (
+	// "fmt"
+	"os"
+)
+
 func main() {
-	
+
 	logo(`
 ██▓███   ██▀███   ▒█████  ▓█████▄  ██▀███   ▒█████   ███▄ ▄███▓ ▒█████   ██▓
 ▓██░  ██▒▓██ ▒ ██▒▒██▒  ██▒▒██▀ ██▌▓██ ▒ ██▒▒██▒  ██▒▓██▒▀█▀ ██▒▒██▒  ██▒▓██▒
@@ -14,14 +19,10 @@ func main() {
 			░         ░ ░     ░       ░         ░ ░         ░       ░ ░   ░  
 							░                                                																						  
 `)
-	
-	print("error", "bruh that didnt work")
-	print("prompt", "type something")
-	print("success", "yay something worked for once!")
-	print("running", "something is running")
-	print("info", "important information")
-
-	if validate("github.com/", "Akshay-Rohatgi") == true {
-		print("success", "username found!")
+	args := os.Args
+	args = args[1:]
+	if len(args) < 1 {
+		print("error", "No username specified")
+		os.Exit(1)
 	}
 }
