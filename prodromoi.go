@@ -24,7 +24,7 @@ func main() {
 		print("error", "No username specified")
 		os.Exit(1)
 	}
-	
+
 	username := args[0]
 	for _, siteInfo := range decode() {
 		print("running", "Checking for user " + username + " at " + siteInfo.Site)
